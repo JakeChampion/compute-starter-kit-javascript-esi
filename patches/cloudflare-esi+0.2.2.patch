@@ -1,0 +1,13 @@
+diff --git a/node_modules/cloudflare-esi/dist/index.js b/node_modules/cloudflare-esi/dist/index.js
+index 333bf39..a805820 100644
+--- a/node_modules/cloudflare-esi/dist/index.js
++++ b/node_modules/cloudflare-esi/dist/index.js
+@@ -249,7 +249,7 @@ async function getVars(request) {
+         vars.headers[header[0].replace(/-/g, "_").toUpperCase()] = header[1];
+     }
+     // return a brand new
+-    return [new Request(current.toString(), request.clone()), vars];
++    return [new Request(current.toString(), request), vars];
+ }
+ /**
+  * Returns Processor Token string for Surrogate headers

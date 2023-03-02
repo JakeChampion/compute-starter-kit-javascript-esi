@@ -1,0 +1,28 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["jchampion@fastly.com"]
+description = ""
+language = "javascript"
+manifest_version = 2
+name = "esi"
+service_id = "B5vLC9sFLBQwmxepza5kT7"
+
+[scripts]
+  build = "npm run build"
+
+
+
+[local_server]
+  [local_server.backends]
+
+    [local_server.backends.esi-backend]
+      url = "https://esi-backend.edgecompute.app"
+
+[setup]
+
+  [setup.backends]
+
+    [setup.backends.esi-backend]
+      address = "esi-backend.edgecompute.app"
+      port = 443

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@fastly/js-compute": "^1",
+    "cloudflare-esi": "^0.2.2"
+  },
+  "scripts": {
+    "install": "patch-package",
+    "build": "js-compute-runtime ./src/index.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "patch-package": "^6.5.1"
+  }
+}
