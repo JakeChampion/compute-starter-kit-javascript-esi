@@ -11,6 +11,6 @@ const customFetcher = async function (request) {
 }
 
 async function handleRequest(event) {
-    const parser = new esi({allowSurrogateDelegation:true}, undefined, customFetcher)
+    const parser = new esi(undefined, undefined, customFetcher)
     return parser.parse(new Request('https://esi-backend.edgecompute.app'))
 };
